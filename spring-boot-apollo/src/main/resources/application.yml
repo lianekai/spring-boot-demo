@@ -1,0 +1,18 @@
+app:
+  id: apollo01
+apollo:
+  meta: http://localhost:8080
+  bootstrap:
+    enabled: true
+    eagerLoad:
+      enabled: true
+#    namespaces: PC.datasource-mysql-config.yml,clz-front-gateway.yml
+server:
+  port: 8761
+
+logging:
+  level:
+    com:
+      lyk:
+        apollo:
+        controller: debug

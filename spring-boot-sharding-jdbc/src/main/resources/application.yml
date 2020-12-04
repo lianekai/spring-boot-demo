@@ -1,0 +1,6 @@
+server:
+  port: 8000
+
+mybatis-plus:
+  global-config:
+    banner: false
