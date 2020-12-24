@@ -53,8 +53,12 @@ public class HeartbeatListener {
 
     // 检测节点是否有效
     public boolean checkNodeValid(String key) {
-        if (!nodes.containsKey(key) || !nodeStatus.containsKey(key)) return false;
-        if ((System.currentTimeMillis() - nodeStatus.get(key)) > timeout) return false;
+        if (!nodes.containsKey(key) || !nodeStatus.containsKey(key)) {
+            return false;
+        }
+        if ((System.currentTimeMillis() - nodeStatus.get(key)) > timeout) {
+            return false;
+        }
         return true;
     }
 
