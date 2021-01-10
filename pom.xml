@@ -19,6 +19,8 @@
         <module>spring-boot-seata</module>
         <module>spring-boot-easyexcel</module>
         <module>spring-boot-heartbeat</module>
+        <module>spring-boot-kafka</module>
+        <module>spring-boot-websocket</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
