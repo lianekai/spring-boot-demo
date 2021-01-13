@@ -21,6 +21,8 @@
         <module>spring-boot-heartbeat</module>
         <module>spring-boot-kafka</module>
         <module>spring-boot-websocket</module>
+        <module>spring-boot-multithreading</module>
+        <module>spring-boot-google-guava</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

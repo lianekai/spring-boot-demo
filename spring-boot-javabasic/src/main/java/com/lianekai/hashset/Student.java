@@ -3,8 +3,6 @@ package com.lianekai.hashset;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Objects;
-
 @Getter
 @Setter
 public class Student {
