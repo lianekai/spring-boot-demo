@@ -37,6 +37,8 @@ public class HeartBeatApplication {
         client1.start();
         Thread client2 = new Thread(new HeartBeatClient());
         client2.start();
+
+        //测试已提交
     }
 }
 
