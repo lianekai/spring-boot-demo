@@ -23,6 +23,7 @@
         <module>spring-boot-websocket</module>
         <module>spring-boot-multithreading</module>
         <module>spring-boot-google-guava</module>
+        <module>spring-boot-caffeine-cache</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

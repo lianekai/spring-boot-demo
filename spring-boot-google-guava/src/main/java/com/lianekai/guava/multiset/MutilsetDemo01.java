@@ -3,7 +3,7 @@ package com.lianekai.guava.multiset;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-public class MutisetDemo01 {
+public class MutilsetDemo01 {
     public static void main(String[] args) {
         Multiset<String> multiset= HashMultiset.create();
         multiset.add("a");
