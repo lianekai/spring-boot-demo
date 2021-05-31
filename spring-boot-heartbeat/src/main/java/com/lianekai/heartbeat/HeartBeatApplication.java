@@ -39,6 +39,7 @@ public class HeartBeatApplication {
         client2.start();
 
         //测试已提交
+
     }
 }
 
