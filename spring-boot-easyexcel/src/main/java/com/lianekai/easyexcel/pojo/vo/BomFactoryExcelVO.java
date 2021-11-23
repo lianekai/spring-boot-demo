@@ -1,4 +1,4 @@
-package com.lianekai.easyexcel.vo;
+package com.lianekai.easyexcel.pojo.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.fastjson.JSON;

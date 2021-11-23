@@ -4,7 +4,7 @@ import com.lianekai.easyexcel.api.ImportRouteApi;
 import com.lianekai.easyexcel.commons.Response;
 import com.lianekai.easyexcel.utils.ExcelListener;
 import com.lianekai.easyexcel.utils.ExcelUtil;
-import com.lianekai.easyexcel.vo.BomFactoryExcelVO;
+import com.lianekai.easyexcel.pojo.vo.BomFactoryExcelVO;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
