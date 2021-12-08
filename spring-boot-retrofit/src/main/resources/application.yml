@@ -1,0 +1,10 @@
+retrofit:
+  enable-response-call-adapter: true
+  enable-log: true
+  pool:
+    test1:
+      max-idle-connections: 3
+      keep-alive-second: 100
+    test2:
+      max-idle-connections: 5
+      keep-alive-second: 50

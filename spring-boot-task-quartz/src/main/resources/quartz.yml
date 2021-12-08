@@ -1,0 +1,30 @@
+org:
+  quartz:
+    dataSource:
+      qzDS:
+        URL: jdbc:mysql://127.0.0.1:3306/quartz?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        connectionProvider:
+          class: com.lianekai.quartz.config.DruidConnectionProvider
+        driver: com.mysql.jdbc.Driver
+        maxConnection: 5
+        password: 123456
+        user: root
+        validationQuery: select 0 from dual
+    jobStore:
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      clusterCheckinInterval: 2000
+      dataSource: qzDS
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+      isClustered: true
+      misfireThreshold: 60000
+      tablePrefix: QRTZ_
+      useProperties: true
+    scheduler:
+      instanceId: AUTO
+      instanceName: SsmScheduler
+      wrapJobExecutionInUserTransaction: false
+    threadPool:
+      class: org.quartz.simpl.SimpleThreadPool
+      threadCount: 10
+      threadPriority: 5
+      threadsInheritContextClassLoaderOfInitializingThread: true

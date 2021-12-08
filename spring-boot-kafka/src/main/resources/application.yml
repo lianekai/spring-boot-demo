@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kafka
+  kafka:
+    producer:
+      bootstrap-servers: 192.168.17.131:9092
