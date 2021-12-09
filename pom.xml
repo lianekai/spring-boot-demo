@@ -28,6 +28,7 @@
         <module>spring-boot-elasticsearch</module>
         <module>spring-boot-aop</module>
         <module>spring-boot-async</module>
+        <module>spring-boot-redis</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
