@@ -1,10 +1,14 @@
 package com.lianekai.redis.util;
 
+import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -18,6 +22,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2021/12/10 10:05
  */
 @Component
+@Slf4j
 public class RedisUtils {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -585,4 +590,53 @@ public class RedisUtils {
         redisTemplate.opsForHyperLogLog().union(key1, key2);
     }
 
+
+    private long timeout = 3000;
+
+    /**
+     * 上锁
+     * @param key 锁标识
+     * @param value 线程标识
+     * @return 上锁状态
+     */
+    public boolean lock(String key,String value){
+        /**开始锁时间*/
+        long start = System.currentTimeMillis();
+        Date date = new Date(start);
+        log.info("开始上锁的时间："+date.getTime());
+
+        while (true){    //while 的条件为true   就进行循环
+            //检测是否超时  如果连接redis网络问题等 超时 ，则变为false跳出循环  避免死循环
+            if (System.currentTimeMillis() - start > timeout) {
+                return false;
+            }
+            //执行set命令  加锁
+            Boolean absent = redisTemplate.opsForValue().setIfAbsent(key, value, timeout, TimeUnit.MILLISECONDS);
+            //是否成功获取锁  加锁成功 ，再循环一次 ，这时候  setnx 肯定就不成功了 ，此返回false 跳出循环  ，加锁就搞定了
+            if (absent) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    /**
+     * 解锁
+     * @param key
+     * @param value
+     */
+    public void unlock(String key,String value) {
+        try {
+            //之前你可能设置了一个setnx命令  进行了 加锁  ，锁不可能一直锁着 ，可能就超时被释放了
+            /**通过当前这个key 去拿值 */
+            String currentValue = (String) redisTemplate.opsForValue().get(key); //当前拿到的值 ，可能所释放了 就为空
+
+            if (!StringUtils.isEmpty(currentValue) && currentValue.equals(value)) { // 如果拿到了这个值，而且这个值不空 这个值还是你设置的，说明是你加的锁，那你就可以释放这个锁
+                // 删除锁状态
+                redisTemplate.opsForValue().getOperations().delete(key);
+            }
+        } catch (Exception e) {
+            log.error("解锁异常{}", e);
+        }
+    }
 }

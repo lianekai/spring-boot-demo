@@ -61,6 +61,9 @@ flushdb  #删除当前数据库中的所有Key
 flushall #删除所有数据库中的key
 get {key}  #获取key的值
 
+setnx  key value  #只在键 key不存在的情况下，将键key的值设置为 value 。
+                  #若键key已经存在，则 SETNX 命令不做任何动作。
+                   
 
 
 
@@ -72,6 +75,20 @@ get {key}  #获取key的值
 
 
 ````
+
+
+
+
+
+
+####利用setnx机制实现分布式锁
+由于setnx 命令在key不存在时才会对key进行存贮 ，才能set成功 
+Redis保证在同一时间，多个请求写入相同key的数据，只有一个请求可以成功写入
+而之后的所有线程在锁定资源被释放之前都不能获得锁。可以实现分布式锁。
+
+
+
+
 
 
 
