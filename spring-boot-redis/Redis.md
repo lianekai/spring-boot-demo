@@ -50,6 +50,29 @@ opsForGeo()
 opsForHyperLogLog()
 ````
 
+/**
+*@return  
+*@date 2021/12/10 
+**/
+####Redis 常用控制台窗口命令
+````shell script
+keys *   #查看所有的key
+flushdb  #删除当前数据库中的所有Key
+flushall #删除所有数据库中的key
+get {key}  #获取key的值
+
+
+
+
+        
+  
+        
+ 
+        
+
+
+````
+
 
 
 
