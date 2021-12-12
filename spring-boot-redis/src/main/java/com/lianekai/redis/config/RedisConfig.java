@@ -11,7 +11,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * TODO
+ * RedisTemplate配置类
  *
  * @author yikai.lian
  * @version: 1.0

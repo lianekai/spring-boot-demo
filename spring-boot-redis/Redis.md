@@ -49,7 +49,12 @@ opsForZSet()
 opsForGeo()
 opsForHyperLogLog()
 ````
+在实际开发过程中需要设置一个对象，直接存储对象会报错
+对象的保存都需要序列化，对象要实现Serializable接口或者使用json序列化
+RedisTemplate 默认使用JdkSerializationRedisSerializer 序列化会使我们的部分字符转义，使用stringRedisTemplate会存在同样的问题，需要手动将实体类转成json字符串；
+Spring默认 的两个RedisTemplate 不方便使用时可以自定义RedisTemplate
 
+#### 自定义RedisTemplate
 /**
 *@return  
 *@date 2021/12/10 
