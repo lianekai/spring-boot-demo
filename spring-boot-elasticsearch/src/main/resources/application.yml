@@ -1,11 +1,11 @@
 server:
-  port:9001
+  port: 8001
 
 spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
       # 没有部署es的时候这个地方注释掉如果没有指定，则启动ClientNode
-      cluster-nodes: 192.168.124.26:9300 #配置es节点信息，逗号分隔
+      cluster-nodes: 81.71.135.210:9300 #配置es节点信息，逗号分隔
       repositories:
         enable: true
