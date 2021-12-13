@@ -9,19 +9,19 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-boot-swagger</module>
-        <module>spring-boot-rocketmq</module>
+        <module>spring-boot-rocket-mq</module>
         <module>spring-boot-task-quartz</module>
         <module>spring-boot-zookeeper</module>
         <module>spring-boot-java8</module>
-        <module>spring-boot-javabasic</module>
+        <module>spring-boot-java-basic</module>
         <module>spring-boot-sharding-jdbc</module>
         <module>spring-boot-apollo</module>
         <module>spring-boot-seata</module>
-        <module>spring-boot-easyexcel</module>
+        <module>spring-boot-easy-excel</module>
         <module>spring-boot-heartbeat</module>
         <module>spring-boot-kafka</module>
         <module>spring-boot-websocket</module>
-        <module>spring-boot-multithreading</module>
+        <module>spring-boot-multi-threading</module>
         <module>spring-boot-google-guava</module>
         <module>spring-boot-caffeine-cache</module>
         <module>spring-boot-retrofit</module>
