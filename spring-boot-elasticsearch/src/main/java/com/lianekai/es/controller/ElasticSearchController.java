@@ -27,4 +27,14 @@ public class ElasticSearchController {
     public Boolean addDoc(@RequestParam("indexName") String indexName) throws IOException {
         return ElasticSearchUtils.addDoc(indexName);
     }
+
+    @PostMapping(value = "es/getDoc")
+    public void getDoc(@RequestParam("index") String index,@RequestParam("id") String id) throws IOException {
+        ElasticSearchUtils.getDoc(index,id);
+    }
+
+    @PostMapping(value = "es/bulk")
+    public void bulk() throws IOException {
+        ElasticSearchUtils.bulkRequest();
+    }
 }

@@ -1,0 +1,5 @@
+微服务之前调用的时候请求不会传递参数，通过实现RequestInterceptor接口,完成对所有的Feign请求,传递请求头和请求参数。
+
+常见的使用是服务间调用时传递token。
+
+apply方法往RequestTemplate添加自定义名称的header。

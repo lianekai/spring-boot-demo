@@ -83,7 +83,7 @@ public class Test {
 
     @org.junit.Test
     public void getKey(){
-        Object value=redisUtils.get("sex");
+        Object value=redisUtils.get("X");
         System.out.println("这个key的value:"+value.toString());
     }
 
@@ -117,7 +117,7 @@ public class Test {
 
     @org.junit.Test
     public void hget(){
-        Object o=redisUtils.hget("person","heliuqing");
+        Object o=redisUtils.hget("person","lianyikai");
         System.out.println("获取Map person 的 key qianyan 的值:"+o.toString());
     }
 
