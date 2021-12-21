@@ -3,15 +3,14 @@ package com.lianekai.redis.util;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.DefaultTypedTuple;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -572,6 +571,55 @@ public class RedisUtils {
         }
 
     }
+
+    // ===============================Zset=================================
+    /***
+     * 向集合中插入元素，并设置分数
+     *
+     * @param key key
+     * @param value value
+     * @param score score
+     * @return
+     * @version: 1.0
+     * @date: 2021/12/21 15:58
+     * @author: yikai.lian
+     */
+    public boolean zSetSet(String key,String value,double score){
+        try {
+            Boolean flag=redisTemplate.opsForZSet().add(key, value, score);
+            assert flag != null;
+            return flag;
+        }catch (Exception e){
+            return false;
+        }
+    }
+
+    //向集合中插入多个元素
+    public boolean mzSetSet(String key,HashSet<ZSetOperations.TypedTuple<Object>> hashSet){
+        redisTemplate.opsForZSet().add(key,hashSet);
+        return true;
+    }
+
+
+    public Long zSetRemove(String key,String value,double score){
+        try {
+            Long flag=redisTemplate.opsForZSet().remove(key);
+            assert flag != null;
+            return flag;
+
+        }catch (Exception e){
+            return 1L;
+        }
+    }
+
+
+
+
+
+
+
+
+
     // ===============================HyperLogLog=================================
 
     public long pfadd(String key, String value) {
