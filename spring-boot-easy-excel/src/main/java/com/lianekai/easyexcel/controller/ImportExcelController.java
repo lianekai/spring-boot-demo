@@ -1,7 +1,7 @@
 package com.lianekai.easyexcel.controller;
 
 import com.lianekai.easyexcel.api.ImportRouteApi;
-import com.lianekai.easyexcel.commons.Response;
+import com.lianekai.easyexcel.common.Response;
 import com.lianekai.easyexcel.utils.ExcelListener;
 import com.lianekai.easyexcel.utils.ExcelUtil;
 import com.lianekai.easyexcel.pojo.vo.BomFactoryExcelVO;

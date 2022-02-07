@@ -29,7 +29,8 @@
         <module>spring-boot-aop</module>
         <module>spring-boot-async</module>
         <module>spring-boot-redis</module>
-        <module>spring-boot-doc</module>
+        <module>spring-boot-study-doc</module>
+        <module>spring-boot-redisjson</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -77,4 +78,22 @@
                 </dependency>
             </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <!--SpringBoot Web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--SpringBoot Test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
+        </dependency>
+    </dependencies>
 </project>

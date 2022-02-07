@@ -9,18 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-redis</artifactId>
+    <artifactId>spring-boot-redisjson</artifactId>
 
     <dependencies>
-        <!--SpringBoot Redis-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--SpringBoot quartz-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>4.0.0</version>
         </dependency>
     </dependencies>
 

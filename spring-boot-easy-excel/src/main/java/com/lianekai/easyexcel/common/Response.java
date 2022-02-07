@@ -1,4 +1,4 @@
-package com.lianekai.easyexcel.commons;
+package com.lianekai.easyexcel.common;
 
 import lombok.Getter;
 import lombok.Setter;
