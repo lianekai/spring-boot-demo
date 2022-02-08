@@ -30,7 +30,7 @@
         <module>spring-boot-async</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-study-doc</module>
-        <module>spring-boot-redisjson</module>
+        <module>spring-boot-redis-json</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
