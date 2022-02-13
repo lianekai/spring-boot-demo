@@ -2,6 +2,7 @@ package com.lianekai.easyexcel.common;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 
 /**
  * TODO
@@ -12,8 +13,16 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@Accessors(chain = true)
 public class Response<T> {
     private Integer code;
     private String message;
     private T data;
+
+    public static <T> Response<T> returnSuccess(T data){
+        Response<T> response=new Response<>();
+        response.setCode(200);
+        response.setData(data);
+        return response;
+    }
 }

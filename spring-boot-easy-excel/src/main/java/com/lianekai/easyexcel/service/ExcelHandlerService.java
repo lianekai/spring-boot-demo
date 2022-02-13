@@ -1,5 +1,10 @@
 package com.lianekai.easyexcel.service;
 
+import com.lianekai.easyexcel.pojo.dto.ImportParamDTO;
+import com.lianekai.easyexcel.pojo.vo.DynamicExcelResultVO;
+import io.swagger.annotations.ApiParam;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -16,4 +21,6 @@ public interface ExcelHandlerService {
      * @param response
      */
     Boolean generateExcelTemplate(HttpServletResponse response);
+
+    DynamicExcelResultVO importDynamicExcel(MultipartFile file, ImportParamDTO importParams);
 }

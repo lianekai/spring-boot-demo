@@ -1,7 +1,7 @@
 package com.lianekai.easyexcel.api;
 
 import com.lianekai.easyexcel.common.Response;
-import com.lianekai.easyexcel.pojo.vo.BomFactoryExcelVO;
+import com.lianekai.easyexcel.pojo.vo.FactoryExcelVO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,5 +19,5 @@ import java.util.List;
 @RequestMapping("/")
 public interface ImportRouteApi {
     @PostMapping("/importData")
-    public Response<List<BomFactoryExcelVO>> importExcel(MultipartFile file) throws IOException;
+    public Response<List<FactoryExcelVO>> importExcel(MultipartFile file) throws IOException;
 }

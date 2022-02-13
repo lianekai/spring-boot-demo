@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
  */
 @Setter
 @Getter
-public class BomFactoryExcelVO{
+public class FactoryExcelVO {
     /**
      * 校验结果信息
      */

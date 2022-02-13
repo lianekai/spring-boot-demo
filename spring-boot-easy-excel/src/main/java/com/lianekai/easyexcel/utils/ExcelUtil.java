@@ -21,6 +21,7 @@ import java.util.List;
  */
 @Slf4j
 public class ExcelUtil<T> {
+
     private static final String XLS = ".xls";
     private static final String XLSX = ".xlsx";
 
@@ -91,6 +92,16 @@ public class ExcelUtil<T> {
             log.info("获取数据错误", e);
         }
         return listResult;
+    }
+
+
+    public static boolean isExcelFormat(String fileName) {
+        if (!fileName.contains(".")) {
+            return false;
+        } else {
+            String fileType = fileName.substring(fileName.lastIndexOf(46));
+            return XLS.equals(fileType) || XLSX.equals(fileType);
+        }
     }
 
 
