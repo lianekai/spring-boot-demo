@@ -29,6 +29,23 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 数据库源相关 -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.tomcat</groupId>
+                    <artifactId>tomcat-jdbc</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -40,16 +57,17 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
+        <!-- Apache ShardingSphere -->
         <dependency>
-            <groupId>io.shardingsphere</groupId>
-            <artifactId>sharding-jdbc-core</artifactId>
-            <version>3.1.0</version>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.0.0-RC3</version>
         </dependency>
 
 <!--        <dependency>-->
-<!--            <groupId>cn.hutool</groupId>-->
-<!--            <artifactId>hutool-all</artifactId>-->
-<!--            <version>5.3.10</version>-->
+<!--        <groupId>cn.hutool</groupId>-->
+<!--        <artifactId>hutool-all</artifactId>-->
+<!--        <version>5.3.10</version>-->
 <!--        </dependency>-->
 
         <dependency>

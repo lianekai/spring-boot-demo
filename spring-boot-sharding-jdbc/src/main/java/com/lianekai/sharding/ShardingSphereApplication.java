@@ -12,9 +12,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @EnableTransactionManagement(proxyTargetClass = true)
-@MapperScan("com.lyk.sharding.mapper")
-public class ShardingJDBCApplication {
+@MapperScan("com.lianekai.sharding.mapper")
+public class ShardingSphereApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ShardingJDBCApplication.class,args);
+        SpringApplication.run(ShardingSphereApplication.class,args);
     }
 }

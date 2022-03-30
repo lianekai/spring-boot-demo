@@ -10,6 +10,7 @@ import com.lianekai.easyexcel.utils.ExcelUtil;
 import com.lianekai.easyexcel.pojo.vo.FactoryExcelVO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,8 +46,10 @@ public class ImportExcelController implements ImportRouteApi{
     @ApiOperation(value = "导入动态数据", httpMethod = "POST")
     @PostMapping("/excel/importDynamicExcel")
     public Response<DynamicExcelResultVO> importDynamicExcel(@ApiParam("导入file对象") MultipartFile file, @ApiParam("导入参数DTO") ImportParamDTO importParams){
-        return Response.returnSuccess(excelHandlerService.importDynamicExcel(file,importParams));
+        return Response.returnSuccess(this.excelHandlerService.importDynamicExcel(file,importParams));
     }
+
+
 
 
 }

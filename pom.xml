@@ -31,6 +31,7 @@
         <module>spring-boot-redis</module>
         <module>spring-boot-study-doc</module>
         <module>spring-boot-redis-json</module>
+        <module>spring-boot-principle</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
