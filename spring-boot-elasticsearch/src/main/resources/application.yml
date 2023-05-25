@@ -9,3 +9,7 @@ spring:
       cluster-nodes: 192.168.124.26:9300 #配置es节点信息，逗号分隔
       repositories:
         enable: true
+
+elasticsearch:
+  host: 127.0.0.1
+  port: 9200

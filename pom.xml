@@ -13,11 +13,11 @@
         <module>spring-boot-task-quartz</module>
         <module>spring-boot-zookeeper</module>
         <module>spring-boot-java8</module>
-        <module>spring-boot-javabasic</module>
+        <module>spring-boot-java-basic</module>
         <module>spring-boot-sharding-jdbc</module>
         <module>spring-boot-apollo</module>
         <module>spring-boot-seata</module>
-        <module>spring-boot-easyexcel</module>
+        <module>spring-boot-easy-excel</module>
         <module>spring-boot-heartbeat</module>
         <module>spring-boot-kafka</module>
         <module>spring-boot-websocket</module>
@@ -28,6 +28,9 @@
         <module>spring-boot-elasticsearch</module>
         <module>spring-boot-aop</module>
         <module>spring-boot-async</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-jackson</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -48,6 +51,16 @@
         <hutool.version>5.4.1</hutool.version>
         <guava.version>29.0-jre</guava.version>
         <user.agent.version>1.20</user.agent.version>
+        <lombok.version>1.18.22</lombok.version>
+        <commons-io.version>2.4</commons-io.version>
+        <hutool-all.version>5.8.5</hutool-all.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <alibaba-transmittable.version>2.14.0</alibaba-transmittable.version>
+        <junit.version>4.13.2</junit.version>
+        <redisson.version>3.17.6</redisson.version>
+        <elastic-search.version>7.12.1</elastic-search.version>
+        <rocketmq.version>4.7.1</rocketmq.version>
+        <guava.version>29.0-jre</guava.version>
     </properties>
 
     <repositories>
@@ -75,4 +88,48 @@
                 </dependency>
             </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool-all.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
+            <version>${alibaba-transmittable.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
