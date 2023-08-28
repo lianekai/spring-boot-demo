@@ -1,0 +1,11 @@
+#tomcat启动端口
+server:
+  port: 8888
+#Rabbitmq的配置
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    virtual-host: /hello
+    username: guest
+    password: guest

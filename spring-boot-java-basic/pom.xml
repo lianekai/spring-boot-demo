@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-javabasic</artifactId>
+    <artifactId>spring-boot-java-basic</artifactId>
 
     <dependencies>
         <dependency>

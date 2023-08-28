@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * ExcelApplication
  *
  * @author yikai.lian
- * @version: 1.0
+ * @version 1.0
  * @date 2020/12/05 10:12
  */
 @SpringBootApplication

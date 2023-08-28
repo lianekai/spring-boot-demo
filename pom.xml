@@ -49,10 +49,10 @@
         <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
         <mysql.version>8.0.21</mysql.version>
         <hutool.version>5.4.1</hutool.version>
-        <guava.version>29.0-jre</guava.version>
+        <guava.version>30.0-jre</guava.version>
         <user.agent.version>1.20</user.agent.version>
         <lombok.version>1.18.22</lombok.version>
-        <commons-io.version>2.4</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <hutool-all.version>5.8.5</hutool-all.version>
         <fastjson.version>1.2.83</fastjson.version>
         <alibaba-transmittable.version>2.14.0</alibaba-transmittable.version>
@@ -90,6 +90,11 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--SpringBoot Web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
