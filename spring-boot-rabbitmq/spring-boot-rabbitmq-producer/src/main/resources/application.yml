@@ -5,7 +5,16 @@ server:
 spring:
   rabbitmq:
     host: 127.0.0.1
-    port: 15672
-    virtual-host: /hello
-    username: guest
-    password: guest
+    port: 5672
+    virtual-host: /shengshi
+    username: shengshi
+    password: shengshi123
+
+## 畹町贸易数据接口
+#spring:
+#  rabbitmq:
+#    host: 116.52.77.162
+#    port: 35672
+#    virtual-host: shengshi
+#    username: shengshi
+#    password: shengshi123

@@ -1,0 +1,1 @@
+accept-language  设置值  zh-cn, en-us ,ar-sa 可以切换不同的语言

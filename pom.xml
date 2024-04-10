@@ -31,6 +31,8 @@
         <module>spring-boot-redis</module>
         <module>spring-boot-jackson</module>
         <module>spring-boot-rabbitmq</module>
+        <module>spring-boot-design-patterns</module>
+        <module>spring-boot-minio</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -94,6 +96,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--SpringBoot Test 单元测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>

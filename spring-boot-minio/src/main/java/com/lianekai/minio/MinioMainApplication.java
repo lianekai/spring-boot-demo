@@ -1,17 +1,17 @@
-package com.lianekai.rabbitmq;
+package com.lianekai.minio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * todo
+ * Minio学习
  *
  * @author lianyikai
- * @date 2023/8/27 0:35
+ * @date 2023/11/29 19:16
  */
 @SpringBootApplication
-public class RabbitMqConsumerApplication {
+public class MinioMainApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RabbitMqConsumerApplication.class,args);
+        SpringApplication.run(MinioMainApplication.class,args);
     }
 }

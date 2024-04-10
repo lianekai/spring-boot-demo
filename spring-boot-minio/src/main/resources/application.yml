@@ -1,0 +1,10 @@
+server:
+  port: 8083
+
+
+# minio 连接配置
+minio:
+  minioServerUrl: http://192.168.64.132:9000
+  minioUser: minio
+  minioPassword: 12345678
+  minioBucket: my-bucket
