@@ -33,12 +33,15 @@
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-design-patterns</module>
         <module>spring-boot-minio</module>
+        <module>spring-boot-oauth2</module>
+        <module>spring-boot-test</module>
+        <module>spring-boot-mybatis-plus</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.3.12.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -48,8 +51,8 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
-        <mysql.version>8.0.21</mysql.version>
+        <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
+        <mysql.version>8.0.28</mysql.version>
         <hutool.version>5.4.1</hutool.version>
         <guava.version>30.0-jre</guava.version>
         <user.agent.version>1.20</user.agent.version>

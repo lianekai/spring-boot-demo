@@ -6,6 +6,6 @@ spring:
     cache-names:
     - userCache
     caffeine:
-      spec: maximumSize=1024,refreshAfterWrite=60s
+      spec: initialCapacity=50,maximumSize=1024,expireAfterWrite=60s
     #     spec: initialCapacity=50,maxinumSize=500,expireAfterWrite=10s
     type: caffeine

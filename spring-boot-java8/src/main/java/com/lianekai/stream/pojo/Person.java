@@ -1,6 +1,7 @@
 package com.lianekai.stream.pojo;
 
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,7 @@ import lombok.Setter;
  * @version: 1.0
  * @date 10:37
  */
-@Getter
-@Setter
+@Data
 public class Person {
     private String name;
     private Integer salary;
