@@ -1,23 +1,30 @@
 package com.lianekai.test.controller;
 
+import java.io.IOException;
+import javax.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
 /**
- * todo
+ * ContainerController
  *
  * @author lianyikai
  * @date 2024/5/9 8:44
  */
-@Controller
-public class Test1Controller {
+@RestController
+@RequestMapping("/container")
+@Slf4j
+public class ContainerController {
 
-    @GetMapping("test1")
-    public String test1(){
+    @PostMapping("/receive")
+    public String test1(@RequestBody Object object){
+        log.info("object:{}",object);
         //重定向回后端接口
         return "test8";
     }

@@ -36,6 +36,8 @@
         <module>spring-boot-oauth2</module>
         <module>spring-boot-test</module>
         <module>spring-boot-mybatis-plus</module>
+        <module>springboot-spark</module>
+        <module>spring-boot-big-data</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

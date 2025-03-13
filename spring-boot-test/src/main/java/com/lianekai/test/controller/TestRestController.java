@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author lianyikai
  * @date 2024/5/9 8:53
  */
-@RestController
+@RestController("rest")
 public class TestRestController {
 
     @GetMapping("test7")

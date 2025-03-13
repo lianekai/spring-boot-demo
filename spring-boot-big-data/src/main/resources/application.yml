@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    url: jdbc:clickhouse://localhost:8123/default
+    username: default
+    password: 123456
+    driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+
+flink:
+  job-manager-host: localhost
+  job-manager-port: 8081
+
+server:
+  port: 8099
