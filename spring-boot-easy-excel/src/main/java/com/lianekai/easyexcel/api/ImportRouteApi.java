@@ -18,6 +18,8 @@ import java.util.List;
 
 @RequestMapping("/")
 public interface ImportRouteApi {
+
     @PostMapping("/importData")
     public Response<List<BomFactoryExcelVO>> importExcel(MultipartFile file) throws IOException;
+
 }

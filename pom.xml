@@ -38,6 +38,7 @@
         <module>spring-boot-mybatis-plus</module>
         <module>springboot-spark</module>
         <module>spring-boot-big-data</module>
+        <module>springboot-security</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -68,6 +69,10 @@
         <elastic-search.version>7.12.1</elastic-search.version>
         <rocketmq.version>4.7.1</rocketmq.version>
         <guava.version>29.0-jre</guava.version>
+        <!--mybatisplus多表连接-->
+        <mybatisplus.join.version>1.5.2</mybatisplus.join.version>
+        <!--dameng-->
+        <dameng.version>8.1.1.49</dameng.version>
     </properties>
 
     <repositories>
@@ -92,6 +97,19 @@
                     <version>${spring.boot.version}</version>
                     <type>pom</type>
                     <scope>import</scope>
+                </dependency>
+                <!-- mybatis-plus-join -->
+                <dependency>
+                    <groupId>com.github.yulichang</groupId>
+                    <artifactId>mybatis-plus-join-boot-starter</artifactId>
+                    <version>${mybatisplus.join.version}</version>
+                </dependency>
+
+                <!-- 达梦数据库驱动 -->
+                <dependency>
+                    <groupId>com.dameng</groupId>
+                    <artifactId>Dm8JdbcDriver18</artifactId>
+                    <version>${dameng.version}</version>
                 </dependency>
             </dependencies>
     </dependencyManagement>

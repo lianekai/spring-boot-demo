@@ -2,6 +2,7 @@ package com.lianekai.easyexcel.utils;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import com.alibaba.fastjson.JSON;
 import java.util.ArrayList;
@@ -9,12 +10,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * TODO
+ * excel监听器
  *
  * @author yikai.lian
  * @version: 1.0
  * @date 2020/12/04 20:34
  */
+@Getter
 @Slf4j
 public class ExcelListener extends AnalysisEventListener<Object> {
     /**
@@ -24,6 +26,9 @@ public class ExcelListener extends AnalysisEventListener<Object> {
 
     /**
      * 可以通过获取到表头
+     * -- GETTER --
+     *  读取excle除了表头的数据
+
      */
     private List<String> headList = new ArrayList<>();
 
@@ -60,17 +65,6 @@ public class ExcelListener extends AnalysisEventListener<Object> {
         log.info("处理空格后的表头"+headList);
         //导入数据的集合
         //解析结束销毁不用的资源
-    }
-
-    public List<Object> getDataList() {
-        return dataList;
-    }
-
-    /**
-     * 读取excle除了表头的数据
-     */
-    public List<String> getHeadList() {
-        return headList;
     }
 
 }

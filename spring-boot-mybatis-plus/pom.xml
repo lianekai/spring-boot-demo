@@ -32,6 +32,18 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- mybatis-plus-join -->
+        <dependency>
+            <groupId>com.github.yulichang</groupId>
+            <artifactId>mybatis-plus-join-boot-starter</artifactId>
+        </dependency>
+
+        <!-- 达梦数据库驱动 -->
+        <dependency>
+            <groupId>com.dameng</groupId>
+            <artifactId>Dm8JdbcDriver18</artifactId>
+        </dependency>
+
         <!-- 数据源 -->
         <dependency>
             <groupId>commons-dbcp</groupId>

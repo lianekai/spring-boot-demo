@@ -1,0 +1,17 @@
+
+spring:
+  datasource:
+    url: jdbc:dm://127.0.0.1:5236/ARKSH
+    username: ARKSH
+    password: ARKSH1234
+    driver-class-name: dm.jdbc.driver.DmDriver
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 开启SQL日志
+  global-config:
+    db-config:
+      id-type: auto # 主键策略
+server:
+  port: 9020
