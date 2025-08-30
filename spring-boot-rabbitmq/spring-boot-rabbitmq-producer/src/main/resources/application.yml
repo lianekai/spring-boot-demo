@@ -6,9 +6,9 @@ spring:
   rabbitmq:
     host: 127.0.0.1
     port: 5672
-    virtual-host: /shengshi
-    username: shengshi
-    password: shengshi123
+    virtual-host: /
+    username: geust
+    password: geust
 
 ## 畹町贸易数据接口
 #spring:
